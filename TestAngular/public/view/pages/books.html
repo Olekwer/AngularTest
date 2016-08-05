@@ -1,0 +1,43 @@
+<a href="#/add-book" class="btn btn-default btn-lg">Добавить книгу</a>
+
+<div class="row">
+
+    <div  class="col-md-4 item bord-div" ng-repeat="book in books">
+        <div class="preview-img text-center">
+            <img class="img-responsive img-thumbnail" ng-src={{book.image}} alt={{book.name}}>
+            <span class="label">lopo</span>
+            <h2>{{book.name}}</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn" href="#/view-book/{{book.id}}">View details &raquo;</a></p>
+            <p><a class="btn" href="#/edit-book/{{book.id}}">Edit</a></p>
+
+            <button type="button"  class="btn btn-danger"  ng-click="takeClick(book.id, book.name)" ng-hide="book.status">Вернуть книгу</button>
+            <button class="btn btn-info btn-lg" type="button" ng-click="select(book)" ng-show="book.status" data-target="#myModal">Отдать пользователю</button>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Выбрана книга </h4>
+                        </div>
+                        <div class="modal-body">
+                            <select class="selectpicker show-tick" ng-model="userTemp.dataSelect" >
+                                <option ng-repeat="user in users" >{{user.name}}</option>
+                            </select>
+                            <p>{{userTemp.dataSelect}}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                            <button type="button" class="btn btn-primary" ng-click="selectOk()">Сохранить изменения</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="remove" data-toggle="tooltip" data-placement="bottom" title="Удалить книгу" ng-click="remove(book.id)">X</button>
+        </div>
+
+    </div>
+</div>

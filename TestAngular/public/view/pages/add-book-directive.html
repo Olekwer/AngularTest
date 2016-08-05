@@ -1,0 +1,15 @@
+<div style="maring:0 auto">
+    <form>
+        <div class="col-xs-2">
+            <label for="ex1">Name</label>
+            <input class="form-control" id="ex1" type="text" ng-model="name">
+        </div>
+        <div class="col-xs-2">
+            <label for="ex2">Author</label>
+            <input class="form-control" id="ex2" type="text" ng-model="author">
+        </div>
+        <input type="file" ng-src="image" >
+
+    <input type="submit" ng-click="add(name, author, image)" value="Add">
+</form>
+</div>

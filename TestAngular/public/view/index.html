@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script src="../js/lib/jquery.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" >
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../css/minified.css">
+    <link rel="stylesheet" href="../css/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" >
+    <link rel="stylesheet" href="../css/app.css" >
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../css/bootstrap-3.3.6-dist/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="../js/lib/angular.min.js"></script>
+    <script src="../js/lib/angular-route.js"></script>
+
+    <script src="../js/controllers/bookApp.js"></script>
+    <script src="../js/controllers/singleBook.js"></script>
+    <script src="../js/directives/editBook.js"></script>
+    <script src="../js/directives/addBook.js"></script>
+    <script src="../js/service/mainService.js"></script>
+    <!--script src="../js/controllers/userCtr.js"></script-->
+
+    <script src="../js/app.routes.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+<body ng-controller="booksController">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" >
+
+            <div class="container">
+                <div class="navbar-header">
+                <a class="navbar-brand"  href="#/">Project</a>
+                </div>
+                   <ul class="nav navbar-nav">
+                       <li><a href="#/users">Пользователи</a> </li>
+                   </ul>
+
+
+            </div>
+
+    </div>
+    <div class="container"  style="margin-top:200px ">
+        <div ng-view></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<div class="row">
+    <div  class="col-md-4 item bord-div">
+        <div class="preview-img text-center">
+            <img class="img-responsive img-thumbnail" ng-src={{book.image}} alt={{book.name}}>
+            <span class="label">lopo</span>
+            <h2>{{book.name}}</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <button type="button" class="btn btn-primary btn-lg" ng-show="book.status" src="/take">Взять книгу</button>
+            <h2 ng-hide="book.status">Нет в наличии</h2>
+        </div>
+    </div>
+</div>

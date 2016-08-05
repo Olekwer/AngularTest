@@ -1,0 +1,23 @@
+<style>
+    p{
+        color: black;
+        font-size:20px;
+        margin: auto;
+    }
+</style>
+<table class="table table-hover">
+           <tr ng-repeat="user in users">
+                <td>
+
+                </td>
+                <td >
+                    <p>{{user.name}}</p>
+                </td>
+               <td>
+                   <ul ng-repeat="book in user.books">
+                       <li>{{book.name}}</li>
+                   </ul>
+               </td>>
+            </tr>
+
+</table>

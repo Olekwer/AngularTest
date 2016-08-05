@@ -1,0 +1,79 @@
+.preview-img{
+	height: 200px;
+	margin-bottom: 16px;
+	position:relative;
+}
+.preview-img img{
+	max-height: 200px;
+}
+.preview-img .label{
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	z-index: 1;
+	display: block;
+}
+h2{
+	font-size:24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.item{
+	height: 550px;
+}
+
+.bord-div{
+	margin: 20px;
+	border: 2px solid silver;
+}
+.remove{
+	position: absolute;
+	font-size: 110%;
+	top: 0;
+	color: darkred;
+	right: 10px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	border: none;
+	background: transparent;
+}
+.tooltip{
+	position: fixed;
+	padding: 10px 20px;
+	border: 1px solid #b3c9ce;
+	border-radius: 4px;
+	text-align: center;
+	font: italic 14px/1.3 arial, sans-serif;
+	z-index: 10000;
+	color: #333;
+	background: #fff;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
+#popUpDialog-bg {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+}
+#popUpDialog {
+	position: fixed;
+	width: 250px;
+	left: 50%;
+	margin-left: -125px;
+	margin-top: 5%;
+	padding: 15px;
+	border-radius: 5px;
+	background: white;
+}
+#popUpDialog .content {
+	margin-bottom: 15px;
+	text-align: center;
+}
+#popUpDialog .buttons-container {
+	width: 80%;
+	margin: 0 auto;
+}
