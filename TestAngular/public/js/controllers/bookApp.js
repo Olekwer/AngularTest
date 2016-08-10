@@ -7,16 +7,25 @@ angular.module('BooksCtr', ['mainService'])
         $scope.userTemp={
             dataSelect:[]
         };
+        function isSelect(){
+            if($scope.userTemp.dataSelect){
+                $scope.error=false;
+            }
+        }
         $scope.select=function(book){
+            isSelect();
             $scope.bookSelect=book;
          //   $scope.bookTakeId=id;
+
             $('#myModal').modal();
         }
         $scope.selectOk=function(){
             console.log("это"+$scope.userTemp.dataSelect);
             if($scope.userTemp.dataSelect==""){
+                $scope.error=true;
                 return;
             }
+            $scope.error=false;
             Qury.selectUser($scope.userTemp.dataSelect,$scope.bookSelect).success(function(data){
                 $('#myModal').modal("hide");
 
