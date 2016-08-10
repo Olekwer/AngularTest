@@ -27,6 +27,9 @@
                                 <option ng-repeat="user in users" >{{user.name}}</option>
                             </select>
                             <p>{{userTemp.dataSelect}}</p>
+                            <div class="alert-danger" ng-show="error">
+                                <p>Нужно выбрать пользователя</p>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
