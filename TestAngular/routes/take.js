@@ -120,7 +120,8 @@ function take(app,express){
                     id: newId,
                     name: newName,
                     author: newAuthor,
-                    image: newImage
+                    image: newImage,
+                    status: true
                 }
                 books.push(book);
                 //  res.json(books);
